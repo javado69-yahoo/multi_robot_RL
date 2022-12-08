@@ -8,8 +8,8 @@ def generate_launch_description():
 
     return LaunchDescription([
         launch_ros.actions.Node(
-            package='box_bot_description',
-            executable='spawn_box_bot_v2.py',
+            package='dummy_robot_sp',
+            executable='spawn_dummy_robot_v2.py',
             output='screen',
             arguments=[
                 '--robot_urdf', launch.substitutions.LaunchConfiguration('robot_urdf'),

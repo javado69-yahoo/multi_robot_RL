@@ -14,8 +14,8 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    pkg_box_bot_gazebo = get_package_share_directory('box_bot_gazebo')
-    pkg_box_bot_description = get_package_share_directory('box_bot_description')
+    pkg_box_bot_gazebo = get_package_share_directory('dummy_robot_gazebo')
+    pkg_box_bot_description = get_package_share_directory('dummy_robot_sp')
 
     # Sart World
     start_world = IncludeLaunchDescription(

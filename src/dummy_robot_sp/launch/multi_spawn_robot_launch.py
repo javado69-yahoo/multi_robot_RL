@@ -25,8 +25,8 @@ def gen_robot_list(number_of_robots):
 
 def generate_launch_description():
 
-    urdf = os.path.join(get_package_share_directory('box_bot_description'), 'robot/', 'box_bot_v2.urdf')
-    pkg_box_bot_description = get_package_share_directory('box_bot_description')
+    urdf = os.path.join(get_package_share_directory('dummy_robot_sp'), 'robot/', 'box_bot_v2.urdf')
+    pkg_box_bot_description = get_package_share_directory('dummy_robot_sp')
     assert os.path.exists(urdf), "The box_bot.urdf doesnt exist in "+str(urdf)
 
     # Names and poses of the robots
@@ -38,7 +38,7 @@ def generate_launch_description():
         spawn_robots_cmds.append(
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(os.path.join(pkg_box_bot_description, 'launch',
-                                                           'spawn_box_bot_launch.py')),
+                                                           'spawn_dummy_robot_launch.py')),
                 launch_arguments={
                                   'robot_urdf': urdf,
                                   'x': TextSubstitution(text=str(robot['x_pose'])),
